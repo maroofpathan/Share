@@ -1,0 +1,2991 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/27/2021 2:53:00 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="WSBIH7TEST-17"
+  DTS:CreatorName="ETCH\mpathan"
+  DTS:DTSID="{7B36FC10-7765-4290-B5F2-F16906F62402}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{671EE530-D3FD-4F89-B6B1-1D1BFE40BF4C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B76913FC-F018-4D03-A78D-E05E88D1EF50}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowsToSkip="1"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\qtsdevbi-1\BIDevelopment\Maroof\Demons\Source.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{52DCDD69-C5CF-490D-A273-F164B860D786}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{110344D1-DFB2-4CEE-80BB-B105D05C4840}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Name"
+              DTS:DTSID="{4C0C9782-C849-44D6-B2BC-678C5FD7064E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_ID"
+              DTS:DTSID="{306E2768-C377-404A-B5C7-4EC0837D2864}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_open_date"
+              DTS:DTSID="{FD15689E-2417-4A5F-860D-31F64992A5B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last_consulted_date"
+              DTS:DTSID="{C4C1906A-E440-4493-825C-BA3CCACF8298}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vaccination_type"
+              DTS:DTSID="{D33C1061-766A-48F6-A4C2-34FFD6172CAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Doctor_consulted"
+              DTS:DTSID="{0345AA9D-3045-44FB-95C4-0AA1656F77CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{8477C64B-8D2F-4577-8CFE-D014DC2FC66C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{A644A321-5B4D-4C2B-806E-4C66B8DA1ECE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date_of_birth"
+              DTS:DTSID="{53A8EE51-323D-4B47-9E7C-21FAA381BE1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Active_customer"
+              DTS:DTSID="{36E13309-947A-452E-8AE8-1A9AD01958C3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F098C4BD-1202-4290-9047-BD897D194226}"
+      DTS:ObjectName="QTSDEVBIDW.Demons">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=QTSDEVBIDW;Initial Catalog=Demons;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load country tables"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F78C4B18-CA8B-40AB-8618-51C3F6615397}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load country tables"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load country tables\AU Data Load"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="AU Data Load"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Hospital_AU]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load country tables\AU Data Load.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  connectionManagerRefId="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[Customer_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Customer_Name"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_Name]" />
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[Customer_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="Customer_ID"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]" />
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[Customer_open_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Customer_open_date"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_open_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[Last_consulted_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Last_consulted_date"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last_consulted_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[Vaccination_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Vaccination_type"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vaccination_type]" />
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[Doctor_consulted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Doctor_consulted"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_consulted]" />
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[Date_of_birth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Date_of_birth"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_birth]" />
+                    <inputColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].Columns[Active_customer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Active_customer"
+                      externalMetadataColumnId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Active_customer]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Customer_open_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Last_consulted_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Vaccination_type" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Doctor_consulted" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Date_of_birth" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Active_customer" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load country tables\AU Data Load.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load country tables\AU Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\AU Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load country tables\AU Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\AU Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load country tables\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Country"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load country tables\Conditional Split.Outputs[USA]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="USA"
+                  synchronousInputId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]} == "USA"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Country == "USA"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load country tables\Conditional Split.Outputs[IND]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="IND"
+                  synchronousInputId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]} == "IND"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Country == "IND"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load country tables\Conditional Split.Outputs[PHIL]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="PHIL"
+                  synchronousInputId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]} == "PHIL"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Country == "PHIL"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load country tables\Conditional Split.Outputs[NYC]"
+                  description="Output 4 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="NYC"
+                  synchronousInputId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]} == "NYC"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Country == "NYC"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">3</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load country tables\Conditional Split.Outputs[AU]"
+                  description="Output 5 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="AU"
+                  synchronousInputId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]} == "AU"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Country == "AU"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">4</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load country tables\Conditional Split.Outputs[default_output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="default_output"
+                  synchronousInputId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load country tables\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load country tables\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load country tables\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load country tables\IND Data Load"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="IND Data Load"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Hospital_IND]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load country tables\IND Data Load.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  connectionManagerRefId="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[Customer_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Customer_Name"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_Name]" />
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[Customer_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="Customer_ID"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]" />
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[Customer_open_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Customer_open_date"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_open_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[Last_consulted_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Last_consulted_date"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last_consulted_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[Vaccination_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Vaccination_type"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vaccination_type]" />
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[Doctor_consulted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Doctor_consulted"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_consulted]" />
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[Date_of_birth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Date_of_birth"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_birth]" />
+                    <inputColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].Columns[Active_customer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Active_customer"
+                      externalMetadataColumnId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Active_customer]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Customer_open_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Last_consulted_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Vaccination_type" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Doctor_consulted" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Date_of_birth" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Active_customer" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load country tables\IND Data Load.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load country tables\IND Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\IND Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load country tables\IND Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\IND Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load country tables\NYC Data Load"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="NYC Data Load"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Hospital_NYC]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load country tables\NYC Data Load.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  connectionManagerRefId="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[Customer_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Customer_Name"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_Name]" />
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[Customer_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="Customer_ID"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]" />
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[Customer_open_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Customer_open_date"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_open_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[Last_consulted_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Last_consulted_date"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last_consulted_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[Vaccination_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Vaccination_type"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vaccination_type]" />
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[Doctor_consulted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Doctor_consulted"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_consulted]" />
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[Date_of_birth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Date_of_birth"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_birth]" />
+                    <inputColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].Columns[Active_customer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Active_customer"
+                      externalMetadataColumnId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Active_customer]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Customer_open_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Last_consulted_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Vaccination_type" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Doctor_consulted" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Date_of_birth" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Active_customer" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load country tables\NYC Data Load.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load country tables\NYC Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\NYC Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load country tables\NYC Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\NYC Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load country tables\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Main_Hospital]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load country tables\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  connectionManagerRefId="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_Name]"
+                      length="255"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_Name]"
+                      name="Customer_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_ID]"
+                      length="18"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]"
+                      name="Customer_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_open_date]"
+                      length="8"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_open_date]"
+                      name="Customer_open_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last_consulted_date]"
+                      length="8"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last_consulted_date]"
+                      name="Last_consulted_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Vaccination_type]"
+                      length="5"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vaccination_type]"
+                      name="Vaccination_type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Doctor_consulted]"
+                      length="255"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_consulted]"
+                      name="Doctor_consulted"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      length="5"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="5"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date_of_birth]"
+                      length="8"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_birth]"
+                      name="Date_of_birth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Active_customer]"
+                      length="1"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Active_customer]"
+                      name="Active_customer"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Customer_open_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Last_consulted_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Vaccination_type" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Doctor_consulted" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Date_of_birth" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Active_customer" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Column 0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Column 0" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_Name]"
+                      name="Customer_Name" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_ID]"
+                      name="Customer_ID" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_open_date]"
+                      name="Customer_open_date" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last_consulted_date]"
+                      name="Last_consulted_date" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Vaccination_type]"
+                      name="Vaccination_type" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Doctor_consulted]"
+                      name="Doctor_consulted" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date_of_birth]"
+                      name="Date_of_birth" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Active_customer]"
+                      name="Active_customer" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load country tables\PHIL Data Load"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="PHIL Data Load"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Hospital_PHIL]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load country tables\PHIL Data Load.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  connectionManagerRefId="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[Customer_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Customer_Name"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_Name]" />
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[Customer_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="Customer_ID"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]" />
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[Customer_open_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Customer_open_date"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_open_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[Last_consulted_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Last_consulted_date"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last_consulted_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[Vaccination_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Vaccination_type"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vaccination_type]" />
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[Doctor_consulted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Doctor_consulted"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_consulted]" />
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[Date_of_birth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Date_of_birth"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_birth]" />
+                    <inputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].Columns[Active_customer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Active_customer"
+                      externalMetadataColumnId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Active_customer]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Customer_open_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Last_consulted_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Vaccination_type" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Doctor_consulted" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Date_of_birth" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Active_customer" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load country tables\PHIL Data Load.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\PHIL Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load country tables\PHIL Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\PHIL Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load country tables\USA Data Load"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="USA Data Load"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Hospital_USA]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load country tables\USA Data Load.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  connectionManagerRefId="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[Customer_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Customer_Name"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_Name]" />
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[Customer_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="Customer_ID"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]" />
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[Customer_open_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Customer_open_date"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_open_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[Last_consulted_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Last_consulted_date"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last_consulted_date]" />
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[Vaccination_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Vaccination_type"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vaccination_type]" />
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[Doctor_consulted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Doctor_consulted"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_consulted]" />
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[Date_of_birth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Date_of_birth"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_birth]" />
+                    <inputColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].Columns[Active_customer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Active_customer"
+                      externalMetadataColumnId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      lineageId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output].Columns[Active_customer]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Customer_open_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Last_consulted_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Vaccination_type" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Doctor_consulted" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Date_of_birth" />
+                    <externalMetadataColumn
+                      refId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Active_customer" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load country tables\USA Data Load.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load country tables\USA Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\USA Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load country tables\USA Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load country tables\USA Data Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load country tables.Paths[AU]"
+              endId="Package\Load country tables\AU Data Load.Inputs[OLE DB Destination Input]"
+              name="AU"
+              startId="Package\Load country tables\Conditional Split.Outputs[AU]" />
+            <path
+              refId="Package\Load country tables.Paths[IND]"
+              endId="Package\Load country tables\IND Data Load.Inputs[OLE DB Destination Input]"
+              name="IND"
+              startId="Package\Load country tables\Conditional Split.Outputs[IND]" />
+            <path
+              refId="Package\Load country tables.Paths[NYC]"
+              endId="Package\Load country tables\NYC Data Load.Inputs[OLE DB Destination Input]"
+              name="NYC"
+              startId="Package\Load country tables\Conditional Split.Outputs[NYC]" />
+            <path
+              refId="Package\Load country tables.Paths[OLE DB Source Output]"
+              endId="Package\Load country tables\Conditional Split.Inputs[Conditional Split Input]"
+              name="OLE DB Source Output"
+              startId="Package\Load country tables\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Load country tables.Paths[PHIL]"
+              endId="Package\Load country tables\PHIL Data Load.Inputs[OLE DB Destination Input]"
+              name="PHIL"
+              startId="Package\Load country tables\Conditional Split.Outputs[PHIL]" />
+            <path
+              refId="Package\Load country tables.Paths[USA]"
+              endId="Package\Load country tables\USA Data Load.Inputs[OLE DB Destination Input]"
+              name="USA"
+              startId="Package\Load country tables\Conditional Split.Outputs[USA]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load main table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4F89BDE1-7608-4CA5-9D6F-D0EC876880D7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load main table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load main table\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load main table\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer_Name]"
+                      length="255"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_Name]"
+                      name="Customer_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer_ID]"
+                      length="18"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_ID]"
+                      name="Customer_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer_open_date]"
+                      length="8"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_open_date]"
+                      name="Customer_open_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last_consulted_date]"
+                      length="8"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Last_consulted_date]"
+                      name="Last_consulted_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vaccination_type]"
+                      length="5"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Vaccination_type]"
+                      name="Vaccination_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Doctor_consulted]"
+                      length="255"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Doctor_consulted]"
+                      name="Doctor_consulted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      length="5"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="5"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date_of_birth]"
+                      length="8"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Date_of_birth]"
+                      name="Date_of_birth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Active_customer]"
+                      length="1"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Active_customer]"
+                      name="Active_customer"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Customer_open_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Last_consulted_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Vaccination_type" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Doctor_consulted" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Date_of_birth" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Active_customer" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Column 0" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load main table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load main table\Main table load"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Main table load"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Main_Hospital]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load main table\Main table load.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  connectionManagerRefId="Package.ConnectionManagers[QTSDEVBIDW.Demons]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[Customer_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Customer_Name"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_Name]" />
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[Customer_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="Customer_ID"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_ID]" />
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[Customer_open_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Customer_open_date"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_open_date]" />
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[Last_consulted_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Last_consulted_date"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Last_consulted_date]" />
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[Vaccination_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Vaccination_type"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Vaccination_type]" />
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[Doctor_consulted]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Doctor_consulted"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Doctor_consulted]" />
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[Date_of_birth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Date_of_birth"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Date_of_birth]" />
+                    <inputColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].Columns[Active_customer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Active_customer"
+                      externalMetadataColumnId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      lineageId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output].Columns[Active_customer]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="18"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Customer_open_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Customer_open_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Last_consulted_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Last_consulted_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Vaccination_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Vaccination_type" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_consulted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Doctor_consulted" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_birth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Date_of_birth" />
+                    <externalMetadataColumn
+                      refId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input].ExternalColumns[Active_customer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Active_customer" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load main table\Main table load.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load main table\Main table load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load main table\Main table load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load main table\Main table load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load main table\Main table load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load main table.Paths[Flat File Source Output]"
+              endId="Package\Load main table\Main table load.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load main table\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{1A027369-FC06-4172-ADA1-86015932E67E}"
+      DTS:From="Package\Load main table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load country tables" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load country tables"
+          TopLeft="238,171" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Load main table"
+          TopLeft="244,31" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="322.25,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,98"
+              Start="0,0"
+              End="0,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load country tables">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Load country tables\Conditional Split"
+          TopLeft="242,104" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Load country tables\USA Data Load"
+          TopLeft="47,317" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Load country tables\IND Data Load"
+          TopLeft="230,313" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Load country tables\PHIL Data Load"
+          TopLeft="417,315" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Load country tables\NYC Data Load"
+          TopLeft="605,317" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Load country tables\AU Data Load"
+          TopLeft="531,104" />
+        <EdgeLayout
+          Id="Package\Load country tables.Paths[IND]"
+          TopLeft="304.65,146">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,167"
+              Start="0,0"
+              End="0,159.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,159.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-9.2078125,75.11474609375,18.415625,9.2705078125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load country tables.Paths[USA]"
+          TopLeft="275.4,146">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-153.4,171"
+              Start="0,0"
+              End="-153.4,163.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5004508566276" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.5004508566276"
+                    Point2="0,51.5004508566276"
+                    Point3="-4,51.5004508566276" />
+                  <mssgle:LineSegment
+                    End="-149.4,51.5004508566276" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-149.4,51.5004508566276"
+                    Point2="-153.4,51.5004508566276"
+                    Point3="-153.4,55.5004508566276" />
+                  <mssgle:LineSegment
+                    End="-153.4,163.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-86.46275390625,56.5004508566276,19.5255078125,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load country tables.Paths[PHIL]"
+          TopLeft="334.2,146">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="159.3,169"
+              Start="0,0"
+              End="159.3,161.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.6464718460442" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,71.6464718460442"
+                    Point2="0,75.6464718460442"
+                    Point3="4,75.6464718460442" />
+                  <mssgle:LineSegment
+                    End="155.3,75.6464718460442" />
+                  <mssgle:CubicBezierSegment
+                    Point1="155.3,75.6464718460442"
+                    Point2="159.3,75.6464718460442"
+                    Point3="159.3,79.6464718460442" />
+                  <mssgle:LineSegment
+                    End="159.3,161.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="68.54806640625,80.6464718460442,22.2038671875,9.2705078125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load country tables.Paths[NYC]"
+          TopLeft="363.6,146">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="316.4,171"
+              Start="0,0"
+              End="316.4,163.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5004508566276" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.5004508566276"
+                    Point2="0,51.5004508566276"
+                    Point3="4,51.5004508566276" />
+                  <mssgle:LineSegment
+                    End="312.4,51.5004508566276" />
+                  <mssgle:CubicBezierSegment
+                    Point1="312.4,51.5004508566276"
+                    Point2="316.4,51.5004508566276"
+                    Point3="316.4,55.5004508566276" />
+                  <mssgle:LineSegment
+                    End="316.4,163.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="148.43373046875,56.5004508566276,19.5325390625,9.5341796875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load country tables.Paths[AU]"
+          TopLeft="397,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="134,0"
+              Start="0,0"
+              End="126.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="126.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="56.271484375,5,13.95703125,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Load country tables\OLE DB Source"
+          TopLeft="240,12" />
+        <EdgeLayout
+          Id="Package\Load country tables.Paths[OLE DB Source Output]"
+          TopLeft="317.25,54">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load country tables\USA Data Load">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load country tables\IND Data Load">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load country tables\PHIL Data Load">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load country tables\NYC Data Load">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load country tables\AU Data Load">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load main table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Load main table\Flat File Source"
+          TopLeft="222.166666666667,31" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Load main table\Main table load"
+          TopLeft="223,138" />
+        <EdgeLayout
+          Id="Package\Load main table.Paths[Flat File Source Output]"
+          TopLeft="298.083333333333,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65"
+              Start="0,0"
+              End="0,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load main table\Main table load">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load country tables\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
